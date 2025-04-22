@@ -25,7 +25,7 @@
             text-align: center;
             font-weight: bold;
             color: #ff5c8d;
-            font-size: 28px;
+            font-size: 20px;
             margin-bottom: 10px;
             display: flex;
             gap:3px;
@@ -36,7 +36,7 @@
             border-top: 1px solid rgb(179, 173, 173); /* Visible line */
         }
         .plan {
-            border: 1px solid grey; /* Changed to transparent border by default */
+            border: 0.9px solid rgba(200, 200, 200, 1); /* Changed to transparent border by default */
             
             padding: 25px;
             margin-bottom: 15px;
@@ -54,22 +54,41 @@ margin-bottom: 20px;
 
         .popular-tag {
             position: absolute;
-            top: -10px;
-            right: 6px;
+            top: -16px;
+            right: 13px;
             background: #ff5c8d;
             color: white;
             font-size: 12px;
             font-weight: bold;
             padding: 5px 10px;
             border-radius: 5px;
+            border-top-left-radius: 0px;
+            border-top-right-radius: 0px;
+            
         }
+
+        .trapezoid {
+            position: absolute;
+            top: -16px;
+            right: 5px;
+           
+            border-bottom: 15px solid rgba(215, 68, 91, 1);
+
+border-left: 8px solid transparent;
+border-right: 8px solid transparent;
+	height: 0;
+	width: 116px;
+}
+
+
+
         .discount {
             background: #ff5c8d;
             color: white;
             font-size: 12px;
             font-weight: bold;
             padding: 3px 6px;
-            border-radius: 5px;
+            border-radius: 1px;
             margin-left: 5px;
         }
         .price {
@@ -80,7 +99,7 @@ margin-bottom: 20px;
         }
         .old-price {
             text-decoration: line-through;
-            color: gray;
+            color: rgb(141, 138, 138);
             font-size: 10px;
             font-weight: 400;
         }
@@ -97,9 +116,9 @@ margin-bottom: 20px;
         }
         select {
             padding: 5px;
-            border: 1px solid #ddd;
-            border-radius: 5px;
-            font-size: 14px;
+            border: 1px solid rgb(142, 138, 138);
+            border-radius: 1px;
+            font-size: 12px;
         }
         .add-to-cart {
             background: #ff5c8d;
@@ -110,6 +129,10 @@ margin-bottom: 20px;
             border-radius: 5px;
             cursor: pointer;
             margin-top: 10px;
+        }
+        .plan label{
+            font-weight: 600;
+            font-size: 14px;
         }
     </style>
 </head>
@@ -122,8 +145,17 @@ margin-bottom: 20px;
         </div>
         <div class="plan selected"> <!-- First option starts as selected -->
             <label>
-                <input type="radio" name="subscription" checked>
+                <input type="radio" name="subscription"  style="accent-color: #e11d48" checked>
                 1 Unit <span class="discount">10% Off</span>
+               
+                <span style="font-family: Inter;
+                font-weight: 400;
+                font-size: 12px;
+                line-height: 100%;
+                letter-spacing: 0%;position: absolute;
+                top: 50px;
+                left: 50px;
+                " >  Standard Price</span>
             </label>
             <span style="display: inline-flex; flex-direction: column; float: right;">
                 <span class="price">$10.00 USD </span>
@@ -133,8 +165,9 @@ margin-bottom: 20px;
             gap:100px;
      margin-left:30px;
      margin-right:80px ;
+     margin-top: 20px;
      font-weight:400;color:black;
-     font-size: 9px;" class="heading101">
+     font-size: 10px;" class="heading101">
          <p>Size</p>
          <p>Colour</p>
      </div>
@@ -188,9 +221,10 @@ margin-bottom: 20px;
             </div>
         </div>
         <div class="plan">
+            <div class="trapezoid "></div>
             <div class="popular-tag">MOST POPULAR</div>
             <label>
-                <input type="radio" name="subscription">
+                <input type="radio"  style="accent-color: #e11d48" name="subscription">
                 2 Unit <span class="discount">20% Off</span>
             </label>
             <span style="display: inline-flex; flex-direction: column; float: right;">
@@ -256,7 +290,7 @@ margin-bottom: 20px;
         </div>
         <div class="plan">
             <label>
-                <input type="radio" name="subscription">
+                <input type="radio"  style="accent-color: #e11d48" name="subscription">
                 3 Unit <span class="discount">30% Off</span>
             </label>
             <span style="display: inline-flex; flex-direction: column; float: right;">
